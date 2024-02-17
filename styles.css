@@ -47,6 +47,11 @@ th, td {
 th {
     background-color: #f2f2f2;
 }
+footer {
+
+    text-align: center;
+
+}
 /* Media Query for Mobile Screens */
 @media only screen and (max-width: 600px) {
     .container {
