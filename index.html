@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Evaluation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="image-container">
+    <img src="deciosn map.png" alt="Your Image">
+    <p>Overall, your model seems to perform reasonably well, with decent accuracy and balanced precision and recall scores</p>
+</div>
+<div class="container">
+    <h1>Decision Tree Model Evaluation</h1>
+    <p>Accuracy: 0.7597402597402597</p>
+    <table class="classification-report">
+        <tr>
+            <th></th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th>F1-score</th>
+            <th>Support</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0.80</td>
+            <td>0.84</td>
+            <td>0.82</td>
+            <td>99</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0.68</td>
+            <td>0.62</td>
+            <td>0.65</td>
+            <td>55</td>
+        </tr>
+        <tr>
+            <td>macro avg</td>
+            <td>0.74</td>
+            <td>0.73</td>
+            <td>0.73</td>
+            <td>154</td>
+        </tr>
+        <tr>
+            <td>weighted avg</td>
+            <td>0.76</td>
+            <td>0.76</td>
+            <td>0.76</td>
+            <td>154</td>
+        </tr>
+    </table>
+
+    <h2>Additional Evaluation Metrics</h2>
+    <p>True Positives (TP): 45</p>
+    <p>False Positives (FP): 43</p>
+    <p>False Negatives (FN): 10</p>
+    <p>True Negatives (TN): 56</p>
+    <p>Accuracy: (TP + TN) / (TP + TN + FP + FN) = (45 + 56) / (45 + 56 + 43 + 10) ≈ 0.6104</p>
+    <p>Precision: TP / (TP + FP) = 45 / (45 + 43) ≈ 0.5114</p>
+    <p>Recall (Sensitivity): TP / (TP + FN) = 45 / (45 + 10) ≈ 0.8182</p>
+    <p>Specificity: TN / (TN + FP) = 56 / (56 + 43) ≈ 0.5657</p>
+    <p>F1-Score: Harmonic mean of precision and recall = 2 * (Precision * Recall) / (Precision + Recall)</p>
+    <p>False Positive Rate (FPR): FP / (FP + TN) = 43 / (43 + 56) ≈ 0.4343</p>
+
+    <h2>Detailed Class-wise Information</h2>
+    <p>Precision:</p>
+    <ul>
+        <li>For class 0: 0.80</li>
+        <li>For class 1: 0.68</li>
+    </ul>
+    <p>Recall (Sensitivity):</p>
+    <ul>
+        <li>For class 0: 0.84</li>
+        <li>For class 1: 0.62</li>
+    </ul>
+    <p>F1-score:</p>
+    <ul>
+        <li>For class 0: 0.82</li>
+        <li>For class 1: 0.65</li>
+    </ul>
+    <p>Support:</p>
+    <ul>
+        <li>For class 0: 99</li>
+        <li>For class 1: 55</li>
+    </ul>
+
+    <h2>Interpretation of Confusion Matrix</h2>
+    <p>True Negative (TN): The number of instances that are correctly predicted as "No Diabetes."</p>
+    <p>False Positive (FP): The number of instances that are incorrectly predicted as "Diabetes" when the actual class is "No Diabetes."</p>
+    <p>False Negative (FN): The number of instances that are incorrectly predicted as "No Diabetes" when the actual class is "Diabetes."</p>
+    <p>True Positive (TP): The number of instances that are correctly predicted as "Diabetes."</p>
+    <p>Based on the provided confusion matrix:</p>
+    <ul>
+        <li>True Negative (TN): 56 instances are correctly predicted as "No Diabetes."</li>
+        <li>False Positive (FP): 43 instances are incorrectly predicted as "Diabetes" when the actual class is "No Diabetes."</li>
+        <li>False Negative (FN): 10 instances are incorrectly predicted as "No Diabetes" when the actual class is "Diabetes."</li>
+        <li>True Positive (TP): 45 instances are correctly predicted as "Diabetes."</li>
+    </ul>
+    <p>In summary, your model correctly predicted 56 instances of "No Diabetes" and 45 instances of "Diabetes," but it misclassified 43 instances of "No Diabetes" as "Diabetes" and 10 instances of "Diabetes" as "No Diabetes." This information is crucial for evaluating the performance of your classifier and understanding its strengths and weaknesses.</p>
+</div>
+</body>
+</html>
+
